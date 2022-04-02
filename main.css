@@ -1,0 +1,47 @@
+<div class="container">
+<div class="currentPlayer">The current player is 
+<span class="player"></span>
+<div class="board"></div>
+<div class="restart">
+<button class="playAgain">play again</button>
+</div>
+</div>
+From above, we have a span with a class player that will tell us whose turn it is to play, The grid class will house the game board and the restart class with house the button to easily renew the game.
+
+CSS
+.board { 
+border:1px solid black; 
+display:flex; 
+flex-wrap:wrap; 
+height:276px; 
+width:330px; 
+background:blue 
+} 
+.board div { 
+height:40px; 
+width:40px; 
+margin:3px;
+border-radius:20px 
+}
+.square{ 
+background:white; 
+} 
+
+.player-one { 
+background:red;
+}
+.player-two { 
+background:yellow; 
+}
+.restart{ 
+background: red; 
+width: 200px; 
+height: 200px; 
+position: fixed; 
+top: 100px; 
+left: 100px; 
+display: none; 
+justify-content: center; 
+align-items: center; 
+flex-direction: column; 
+}
