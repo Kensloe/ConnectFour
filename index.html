@@ -5,64 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href=“css/main.css” rel=“stylesheet” type=“text/css” />
-    <script defer src=“js/main.js”></script>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script defer src="js/main.js"></script>
 </head>
 <h1>CONNECT FOUR</h1>
 <body>
-  
-<div class="container">
-    <div class="currentPlayer">The current player is 
-    <span class="player"></span>
-    <div class="board"></div>
-    <div class="restart">
-    <button class="playAgain">play again</button>
-    </div>
-    
-    <div class="game">
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-        <div class="board"></div>
-    </div>
-    
-</body>
-</html>
+
+<div id="colorTurn">Yellow Turn</div>
+<div id="grid">
+<div class="row">
+  <div class="cell" id="board00" onclick="selectColumn(0)"></div>
+  <div class="cell" id="board01" onclick="selectColumn(1)"></div>
+  <div class="cell" id="board02" onclick="selectColumn(2)"></div>
+  <div class="cell" id="board03" onclick="selectColumn(3)"></div>
+  <div class="cell" id="board04" onclick="selectColumn(4)"></div>
+  <div class="cell" id="board05" onclick="selectColumn(5)"></div>
+  <div class="cell" id="board06" onclick="selectColumn(6)"></div>
+</div>
+<div class="row">  
+  <div class="cell" id="board10" onclick="selectColumn(0)"></div>
+  <div class="cell" id="board11" onclick="selectColumn(1)"></div>
+  <div class="cell" id="board12" onclick="selectColumn(2)"></div>
+  <div class="cell" id="board13" onclick="selectColumn(3)"></div>
+  <div class="cell" id="board14" onclick="selectColumn(4)"></div>
+  <div class="cell" id="board15" onclick="selectColumn(5)"></div>
+  <div class="cell" id="board16" onclick="selectColumn(6)"></div>
+</div>
+<div class="row">  
+  <div class="board" id="board20" onclick="selectColumn(0)"></div>
+  <div class="board" id="board21" onclick="selectColumn(1)"></div>
+  <div class="board" id="board22" onclick="selectColumn(2)"></div>
+  <div class="board" id="board23" onclick="selectColumn(3)"></div>
+  <div class="board" id="board24" onclick="selectColumn(4)"></div>
+  <div class="board" id="board25" onclick="selectColumn(5)"></div>
+  <div class="board" id="board26" onclick="selectColumn(6)"></div>
+</div>
+<div class="row">  
+  <div class="board" id="board30" onclick="selectColumn(0)"></div>
+  <div class="board" id="board31" onclick="selectColumn(1)"></div>
+  <div class="board" id="board32" onclick="selectColumn(2)"></div>
+  <div class="board" id="board33" onclick="selectColumn(3)"></div>
+  <div class="board" id="board34" onclick="selectColumn(4)"></div>
+  <div class="board" id="board35" onclick="selectColumn(5)"></div>
+  <div class="board" id="board36" onclick="selectColumn(6)"></div>
+</div>
+<div class="row">
+  <div class="board" id="board40" onclick="selectColumn(0)"></div>
+  <div class="board" id="board41" onclick="selectColumn(1)"></div>
+  <div class="board" id="board42" onclick="selectColumn(2)"></div>
+  <div class="board" id="board43" onclick="selectColumn(3)"></div>
+  <div class="board" id="board44" onclick="selectColumn(4)"></div>
+  <div class="board" id="board45" onclick="selectColumn(5)"></div>
+  <div class="board" id="board46" onclick="selectColumn(6)"></div>
+</div>
+<div class="row">
+  <div class="board" id="board50" onclick="selectColumn(0)"></div>
+  <div class="board" id="board51" onclick="selectColumn(1)"></div>
+  <div class="board" id="board52" onclick="selectColumn(2)"></div>
+  <div class="board" id="board53" onclick="selectColumn(3)"></div>
+  <div class="board" id="board54" onclick="selectColumn(4)"></div>
+  <div class="board" id="board55" onclick="selectColumn(5)"></div>
+  <div class="board" id="board56" onclick="selectColumn(6)"></div>
+</div>
+</div>
+
+<input id="resetButton" type="button" value="Reset" onclick="refreshGrid()" /></br></br>
+
+ </html> 
+</body> 
