@@ -1,14 +1,14 @@
 BODY {
     font-family: 'Open Sans', sans-serif;
-    color: #0044AA;
+    color: #2e8f1b;
     text-align: center;
   }
   H1 {
-    font-size: 24px;
+    font-size: 26px;
   }
   
   #colorTurn {
-    font-size: 18px;
+    font-size: 20px;
   }
   
   #grid {
@@ -18,7 +18,7 @@ BODY {
     height: 365px;
     padding: 10px;
     background: grey;
-    border: 1px solid #0044AA;
+    border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -32,7 +32,7 @@ BODY {
   
   .board {
     display: table-cell;
-    background-color: #FFFFFF;
+    background-color: #8b4a4a;
     width: 50px;
     height: 50px;
     -webkit-border-radius: 50%;
