@@ -10,33 +10,59 @@ BODY {
   #colorTurn {
     font-size: 20px;
   }
-  
-  #grid {
-    margin: 20px auto;
-    display: table;
-    width: 420px;
-    height: 365px;
-    padding: 10px;
-    background: grey;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-     border-spacing: 5px 5px;
+ 
+  main {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 50px;
+  }
+
+
+  #markers {
+    display: grid;
+    grid-template-columns: repeat(7, 16vmin);
+    gap: 2vmin;
+    margin-top: 1vmin;
   }
   
-  .row {
-    display: table-row;
+  #markers > div {
+    height: 16vmin;
+    border-width: 8vmin;
+    border-style: solid;
+    border-color: lightgray transparent transparent;
+    transform: scale(0.5);
   }
   
-  .board {
-    display: table-cell;
-    background-color: #8b4a4a;
-    width: 50px;
-    height: 50px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
+  #markers > div:hover {
+    transform: scale(0.9);
+    transition: transform 150ms ease-in;
+    border-top-color: rgb(0, 0, 0);
+  }
+  
+  #board {
+    display: grid;
+    grid-template-columns: repeat(7, 16vmin);
+    grid-template-rows: repeat(6, 16vmin);
+    gap: 2vmin;
+    margin-top: -3vmin; 
+  }
+  
+  
+  #board > div {
     border-radius: 50%;
-    margin: 2px;
+    border: 0.1vmin solid rgb(143, 89, 89);
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 50px;
+  }
+
+  }
+  
+
+
+  reset {
+
   }

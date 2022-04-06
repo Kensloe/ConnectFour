@@ -1,29 +1,87 @@
 /*----- constants -----*/
-var player=1; //1 for Yellow, 2 for Red
-var grid = [
-  [0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0]
-];
+const COLORS = {
+'0': 'white',
+'1': 'red',
+'-1': 'blue'
+};
+
 
 /*----- app's state (variables) -----*/
+let board;  // 2D Array where the nested arrays rep the columns
+let turn;  // 1 or -1; 0 for nobody home in that cell
 
 
 /*----- cached element references -----*/
-
-
+const markerEls = [...document.querySelectorAll('#markers > div')];
 
 /*----- event listeners -----*/
+document.getElementById('markers').addEventListener('click', handleDrop);
+
+
+
 
 /*----- functions -----*/
 
+init();
 
-
-function resetGrid() {
-//Reset all values to 0 in the grid array
-  
-  
+// initialize state, then call render()
+function init() {
+  board = [
+    [0, 0, 0, 0, 0, 0],  // column 0
+    [0, 0, 0, 0, 0, 0],  // column 1
+    [0, 0, 0, 0, 0, 0],  // column 2
+    [0, 0, 0, 0, 0, 0],  // column 3
+    [0, 0, 0, 0, 0, 0],  // column 4
+    [0, 0, 0, 0, 0, 0],  // column 5
+    [0, 0, 0, 0, 0, 0],  // column 6
+  ];
+  turn = 1;
+  render();
 }
+
+//A function based on the slected column
+function selectColumn(col) {
+
+  if (player==1) {
+    grid[5][col]=1;
+    player=2;
+    document.getElementById("colorTurn").innerHTML="Red Turn";
+  } else {
+    grid[5][col]=2;
+    player=1;
+    document.getElementById("colorTurn").innerHTML="Yellow Turn";
+  }
+
+  refreshGrid();
+}
+
+
+function render() {
+  // Iterate over the column arrays
+  board.forEach(function(colArr, colIdx) {
+    colArr.forEach(function(cellVal, rowIdx) {
+      const cellEl = document.getElementById(`c${colIdx}r${rowIdx}`);
+      cellEl.style.backgroundColor = COLORS[cellVal];
+    });
+  });
+  renderMarkers();
+}
+
+// hide/show the markers (hide if no 0's exist in that column)
+function renderMarkers() {
+  markerEls.forEach(function(markerEl, colIdx) {
+    markerEl.style.visibility = board[colIdx].includes(0) ? 'visible' : 'hidden';
+  });
+}
+
+// Update all impacted state, then call render
+function handleDrop(evt) {
+  const colIdx = markerEls.indexOf(evt.target);
+  if (colIdx === -1) return;
+  const colArr = board[colIdx];
+  const rowIdx = colArr.indexOf(0);
+  colArr[rowIdx] = turn;
+  turn *= -1;
+  render();
+}
+

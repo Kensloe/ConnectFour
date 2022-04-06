@@ -9,71 +9,79 @@
     <script defer src="js/main.js"></script>
 </head>
 <h1>CONNECT FOUR</h1>
+<h2>Players turns</h2>
+
 <body>
+  <main>
 <div id="colorTurn">Yellow Turn</div>
-<div id="grid">
-<div class="row">
-  <div class="board" id="board00" onclick="selectColumn(0)"></div>
-  <div class="board" id="board01" onclick="selectColumn(1)"></div>
-  <div class="board" id="board02" onclick="selectColumn(2)"></div>
-  <div class="board" id="board03" onclick="selectColumn(3)"></div>
-  <div class="board" id="board04" onclick="selectColumn(4)"></div>
-  <div class="board" id="board05" onclick="selectColumn(5)"></div>
-  <div class="board" id="board06" onclick="selectColumn(6)"></div>
-  
-</div>
-<div class="row">  
-  <div class="board" id="board10" onclick="selectColumn(0)"></div>
-  <div class="board" id="board11" onclick="selectColumn(1)"></div>
-  <div class="board" id="board12" onclick="selectColumn(2)"></div>
-  <div class="board" id="board13" onclick="selectColumn(3)"></div>
-  <div class="board" id="board14" onclick="selectColumn(4)"></div>
-  <div class="board" id="board15" onclick="selectColumn(5)"></div>
-  <div class="board" id="board16" onclick="selectColumn(6)"></div>
-  
-</div>
-<div class="row">  
-  <div class="board" id="board20" onclick="selectColumn(0)"></div>
-  <div class="board" id="board21" onclick="selectColumn(1)"></div>
-  <div class="board" id="board22" onclick="selectColumn(2)"></div>
-  <div class="board" id="board23" onclick="selectColumn(3)"></div>
-  <div class="board" id="board24" onclick="selectColumn(4)"></div>
-  <div class="board" id="board25" onclick="selectColumn(5)"></div>
-  <div class="board" id="board26" onclick="selectColumn(6)"></div>
-  
-</div>
-<div class="row">  
-  <div class="board" id="board30" onclick="selectColumn(0)"></div>
-  <div class="board" id="board31" onclick="selectColumn(1)"></div>
-  <div class="board" id="board32" onclick="selectColumn(2)"></div>
-  <div class="board" id="board33" onclick="selectColumn(3)"></div>
-  <div class="board" id="board34" onclick="selectColumn(4)"></div>
-  <div class="board" id="board35" onclick="selectColumn(5)"></div>
-  <div class="board" id="board36" onclick="selectColumn(6)"></div>
-  
-</div>
-<div class="row">
-  <div class="board" id="board40" onclick="selectColumn(0)"></div>
-  <div class="board" id="board41" onclick="selectColumn(1)"></div>
-  <div class="board" id="board42" onclick="selectColumn(2)"></div>
-  <div class="board" id="board43" onclick="selectColumn(3)"></div>
-  <div class="board" id="board44" onclick="selectColumn(4)"></div>
-  <div class="board" id="board45" onclick="selectColumn(5)"></div>
-  <div class="board" id="board46" onclick="selectColumn(6)"></div>
+<div id="colorTurn">Red Turn</div>
 
-</div>
-<div class="row">
-  <div class="board" id="board50" onclick="selectColumn(0)"></div>
-  <div class="board" id="board51" onclick="selectColumn(1)"></div>
-  <div class="board" id="board52" onclick="selectColumn(2)"></div>
-  <div class="board" id="board53" onclick="selectColumn(3)"></div>
-  <div class="board" id="board54" onclick="selectColumn(4)"></div>
-  <div class="board" id="board55" onclick="selectColumn(5)"></div>
-  <div class="board" id="board56" onclick="selectColumn(6)"></div>
-</div>
-</div>
+<section id="markers">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+<section id="board"> 
+  <div id="c0r5"></div>
+  <div id="c1r5"></div>
+  <div id="c2r5"></div>
+  <div id="c3r5"></div>
+  <div id="c4r5"></div>
+  <div id="c5r5"></div>
+  <div id="c6r5"></div>
+  
+  <div id="c0r4"></div>
+  <div id="c1r4"></div>
+  <div id="c2r4"></div>
+  <div id="c3r4"></div>
+  <div id="c4r4"></div>
+  <div id="c5r4"></div>
+  <div id="c6r4"></div>
 
-<input id="resetButton" type="button" value="Reset" onclick="refreshGrid()" /></br></br>
+  <div id="c0r3"></div>
+  <div id="c1r3"></div>
+  <div id="c2r3"></div>
+  <div id="c3r3"></div>
+  <div id="c4r3"></div>
+  <div id="c5r3"></div>
+  <div id="c6r3"></div>
 
- </html> 
-</body> 
+  <div id="c0r2"></div>
+  <div id="c1r2"></div>
+  <div id="c2r2"></div>
+  <div id="c3r2"></div>
+  <div id="c4r2"></div>
+  <div id="c5r2"></div>
+  <div id="c6r2"></div>
+  
+
+  <div id="c0r1"></div>
+  <div id="c1r1"></div>
+  <div id="c2r1"></div>
+  <div id="c3r1"></div>
+  <div id="c4r1"></div>
+  <div id="c5r1"></div>
+  <div id="c6r1"></div>
+  
+
+  <div id="c0r0"></div>
+  <div id="c1r0"></div>
+  <div id="c2r0"></div>
+  <div id="c3r0"></div>
+  <div id="c4r0"></div>
+  <div id="c5r0"></div>
+  <div id="c6r0s"></div>
+  
+</section>
+ 
+<div>
+  <h3> Reset </h3>
+  <h4> X winner</h4>
+</div>
+</main>
+</html>
+</body>
