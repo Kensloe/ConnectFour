@@ -1,28 +1,16 @@
-BODY {
-    font-family: 'Open Sans', sans-serif;
-    color: #2e8f1b;
-    text-align: center;
-  }
-  H1 {
-    font-size: 26px;
-  }
-  
-  #colorTurn {
-    font-size: 20px;
-  }
  
   main {
-    display: grid;
     grid-template-columns: 80% 20%;
-    gap: 50px;
   }
 
 
   #markers {
     display: grid;
-    grid-template-columns: repeat(7, 16vmin);
+    grid-template-columns: repeat(7, 7vmin);
     gap: 2vmin;
     margin-top: 1vmin;
+    
+    
   }
   
   #markers > div {
@@ -41,8 +29,8 @@ BODY {
   
   #board {
     display: grid;
-    grid-template-columns: repeat(7, 16vmin);
-    grid-template-rows: repeat(6, 16vmin);
+    grid-template-columns: repeat(7, 8vmin);
+    grid-template-rows: repeat(6, 8vmin);
     gap: 2vmin;
     margin-top: -3vmin; 
   }
@@ -52,15 +40,7 @@ BODY {
     border-radius: 50%;
     border: 0.1vmin solid rgb(143, 89, 89);
   }
-  
-  main {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    gap: 50px;
-  }
-
-  }
-  
+    
 
 
   reset {

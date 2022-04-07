@@ -1,14 +1,15 @@
 /*----- constants -----*/
 const COLORS = {
 '0': 'white',
-'1': 'red',
-'-1': 'blue'
+'1': 'yellow',
+'-1': 'black',
 };
 
 
 /*----- app's state (variables) -----*/
 let board;  // 2D Array where the nested arrays rep the columns
 let turn;  // 1 or -1; 0 for nobody home in that cell
+let winner; // 4 in row
 
 
 /*----- cached element references -----*/
@@ -36,25 +37,10 @@ function init() {
     [0, 0, 0, 0, 0, 0],  // column 6
   ];
   turn = 1;
+  winner = null;
   render();
+
 }
-
-//A function based on the slected column
-function selectColumn(col) {
-
-  if (player==1) {
-    grid[5][col]=1;
-    player=2;
-    document.getElementById("colorTurn").innerHTML="Red Turn";
-  } else {
-    grid[5][col]=2;
-    player=1;
-    document.getElementById("colorTurn").innerHTML="Yellow Turn";
-  }
-
-  refreshGrid();
-}
-
 
 function render() {
   // Iterate over the column arrays
@@ -81,7 +67,25 @@ function handleDrop(evt) {
   const colArr = board[colIdx];
   const rowIdx = colArr.indexOf(0);
   colArr[rowIdx] = turn;
-  turn *= -1;
   render();
+  checkWin();
+  turn *= -1;
+  
 }
+function checkWin() {
+  console.log(turn)
+  for(let i=0; i < board.length -4; i++){
+    for(let j=0; j < board[i].length -4; j++){
+      if(board[i] [j] === turn && board[i][j+1] === turn && board[i][j+2] && board[i][j+3]){
+        winner = true
+      } else if(board[i][j] === turn && board[i+1][j] === turn && board[i+2][j] === turn && board[i+3][j]){
+        winner = true
+      }else if(board[i][j] === turn && board[i+1][j+1] === turn && board[i+2][j+2] === turn && board[i+3][j+3]){
+        winner = true
+      }else if(board[i][j] === turn && board[i+1][j-1] === turn && board[i+2][j-2] === turn && board[i+3][j-3]){
+        winner = true
 
+      }
+    }
+  }
+};
