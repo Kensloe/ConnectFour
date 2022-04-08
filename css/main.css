@@ -1,15 +1,24 @@
  
-  main {
-    grid-template-columns: 80% 20%;
-  }
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url("https://cdn.imgbin.com/14/12/18/imgbin-kisame-hoshigaki-itachi-uchiha-sasuke-uchiha-naruto-uzumaki-kakuzu-kisame-hoshigaki-YdBFPREzR8zVbCyXkDDgYVaQ5.jpg"); 
+  
 
 
+}
   #markers {
     display: grid;
     grid-template-columns: repeat(7, 7vmin);
     gap: 2vmin;
     margin-top: 1vmin;
-    
+    align-items: center;
+    justify-content: center;
+  
     
   }
   
@@ -17,8 +26,10 @@
     height: 16vmin;
     border-width: 8vmin;
     border-style: solid;
-    border-color: lightgray transparent transparent;
+    border-color: rgb(89, 83, 83) transparent transparent;
     transform: scale(0.5);
+    align-items: center;
+   
   }
   
   #markers > div:hover {
@@ -32,17 +43,17 @@
     grid-template-columns: repeat(7, 8vmin);
     grid-template-rows: repeat(6, 8vmin);
     gap: 2vmin;
-    margin-top: -3vmin; 
+    margin-top: -15vmin; 
   }
-  
   
   #board > div {
     border-radius: 50%;
-    border: 0.1vmin solid rgb(143, 89, 89);
+    border: 0.1vmin solid rgb(6, 5, 5);
   }
-    
 
-
-  reset {
+  #reset {
+    background-color: rgb(205, 176, 139);
+    height: 10px;
+    width: 5px;
 
   }
