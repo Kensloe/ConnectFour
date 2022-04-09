@@ -146,20 +146,4 @@ function checkForwardSlash(colIdx, rowIdx) {
   }
   return count === 4 ? winner = player : null;
 }
-// function checkWin() {
-//   console.log(turn)
-//   for(let i=0; i < board.length -4; i++){
-//     for(let j=0; j < board[i].length -4; j++){
-//       if(board[i] [j] === turn && board[i][j+1] === turn && board[i][j+2] && board[i][j+3]){
-//         winner = true
-//       } else if(board[i][j] === turn && board[i+1][j] === turn && board[i+2][j] === turn && board[i+3][j]){
-//         winner = true
-//       }else if(board[i][j] === turn && board[i+1][j+1] === turn && board[i+2][j+2] === turn && board[i+3][j+3]){
-//         winner = true
-//       }else if(board[i][j] === turn && board[i+1][j-1] === turn && board[i+2][j-2] === turn && board[i+3][j-3]){
-//         winner = true
 
-//       }
-//     }
-//   }
-// };
