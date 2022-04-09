@@ -27,5 +27,5 @@ My background picture is Kisame and Itachi two of my favorite characters in Naru
 
 # Next Steps
 
-- Future enhancement one...
-- Future enhancement two... 
+- Future enhancement one: Connect four enhances problem solving skills 
+- Future enhancement two: Teaches the importance of plan and think ahead
