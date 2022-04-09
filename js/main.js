@@ -15,6 +15,7 @@ let winner; // 4 in row
 
 /*----- cached element references -----*/
 const markerEls = [...document.querySelectorAll('#markers > div')];
+const h2El = document.getElementById('winner');
 
 
 
@@ -42,6 +43,7 @@ function init() {
   ];
   turn = 1;
   winner = null;
+  h2El.innerHTML = '';
   render();
 
 }
@@ -57,13 +59,17 @@ function render() {
   renderMarkers();
 }
 
+
+
 // hide/show the markers (hide if no 0's exist in that column)
 function renderMarkers() {
   markerEls.forEach(function(markerEl, colIdx) {
     markerEl.style.visibility = board[colIdx].includes(0) ? 'visible' : 'hidden';
   });
 }
-function rendederWinner(player) {
+function renderWinner() {
+  h2El.innerHTML = `Winner ${winner === 1 ? 'yellow' : 'black'  }` 
+  
 
 }
 
@@ -80,6 +86,9 @@ function handleDrop(evt) {
   colArr[rowIdx] = turn;
   render();
   winner = getWinner(colIdx, rowIdx);
+  if (winner) {
+    renderWinner();
+  }
   turn *= -1;
   
 }
