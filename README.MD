@@ -10,8 +10,8 @@ In 1973,  Howard Wexler and his business partner invented connect Four, Ned Stro
 
 # Screenshot
 
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
+<img src="https://i.imgur.com/xgwkf5A.jpg">
+<img src="https://i.imgur.com/1f5Ngu6.jpg">
 
 My background picture is Kisame and Itachi two of my favorite characters in Naruto
 # Technologies Used
